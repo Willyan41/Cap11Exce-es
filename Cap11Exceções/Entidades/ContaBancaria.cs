@@ -34,11 +34,11 @@ namespace Cap11Exceções.Entidades
 
             if (Saldo < quantidade)
             {
-                Console.WriteLine( "Saldo insuficiente para saque.");
+                throw new DomainException ( "Saldo insuficiente para saque.");
             }
             else if (quantidade > LimiteSaque)
             {
-                Console.WriteLine("O valor excede o limite de saque.");
+                throw new DomainException("O valor excede o limite de saque.");
             }
             else 
             Saldo -= quantidade;

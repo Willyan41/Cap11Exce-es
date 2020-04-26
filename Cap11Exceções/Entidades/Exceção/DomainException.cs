@@ -4,10 +4,16 @@ using System.Text;
 
 namespace Cap11Exceções.Entidades.Exceção
 {
-    class DomainException : ApplicationException
+    class DomainException : Exception
     {
-        public DomainException(string message) : base(message)
+        public DomainException(string msg) : base(msg)
         {
         }
+
+        public DomainException(string msg, Exception inner) : base(msg, inner)
+        { 
+        }
+
+
     }
 }

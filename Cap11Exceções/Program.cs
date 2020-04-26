@@ -37,6 +37,10 @@ namespace Cap11Exceções
             {
                 Console.WriteLine("Erro: "+ ex.Message);
             }
+            catch ( DomainException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
         }
     }
